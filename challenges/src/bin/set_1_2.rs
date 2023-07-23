@@ -1,4 +1,4 @@
-use serialize::{DeSerialize, Serialize};
+use serialize::DeSerialize;
 
 pub trait Xorable {
     fn xor(&self, b: &Vec<u8>) -> Vec<u8>;
@@ -16,7 +16,6 @@ fn main() {
 
     let result = a.xor(&b);
 
-    println!("{:?} {:?}", a.to_hex(), b.to_hex());
     assert!(result == "746865206b696420646f6e277420706c6179".from_hex());
 
     println!("Fixed XOR: OK!");

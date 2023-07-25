@@ -1,14 +1,5 @@
 use serialize::DeSerialize;
-
-pub trait Xorable {
-    fn xor(&self, b: &Vec<u8>) -> Vec<u8>;
-}
-
-impl Xorable for Vec<u8> {
-    fn xor(&self, b: &Vec<u8>) -> Vec<u8> {
-        self.iter().zip(b.iter()).map(|(a, b)| a ^ b).collect()
-    }
-}
+use xor::Xor;
 
 fn main() {
     let a = "1c0111001f010100061a024b53535009181c".from_hex();

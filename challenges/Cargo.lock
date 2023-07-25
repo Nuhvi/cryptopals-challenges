@@ -7,8 +7,13 @@ name = "cryptopals-challenges"
 version = "0.1.0"
 dependencies = [
  "serialize",
+ "xor",
 ]
 
 [[package]]
 name = "serialize"
+version = "0.1.0"
+
+[[package]]
+name = "xor"
 version = "0.1.0"
